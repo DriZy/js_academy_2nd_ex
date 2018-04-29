@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JSA-Ex-3</title>
+</head>
+
+<body>
+
+    <h1>Variables Functions and Loops</h1>
+
+    <!-- EXercise one -->
+    <script>
+        var a = "#"
+        for (i = 1; i <= 7; i++) {
+            console.log(a.repeat(i));
+        }
+
+
+        // <!-- Exercise two -->
+
+
+        for (i = 1; i <= 100; i++) {
+            if (i == 100) {
+                console.log('This is the end of the iteration');
+            } else if (!(i % 3) && (i % 5)) {
+                console.log('Fizz');
+            } else if ((i % 3) && !(i % 5)) {
+                console.log('Buzz');
+            } else {
+                console.log(i);
+            }
+        }
+
+
+
+        // Exercise three
+
+        // for (i = 1; i <= 100; i++) {
+
+        //     if (i == 100) {
+        //         console.log('This is the end of the iteration');
+        //     } else if (!(i % 3) && (i % 5)) {
+        //         console.log('Fizz');
+        //     } else if ((i % 3) && !(i % 5)) {
+        //         console.log('Buzz')
+        //     } else if (!(i % 3) && !(i % 5)) {
+        //         console.log('FizzBuzz')
+        //     } else {
+        //         console.log(i);
+        //     }
+
+        // }
+
+
+        for (let i = 0; i < 100;)
+            console.log((++i % 3 ? '' : 'fizz') + (i % 5 ? '' : 'buzz') || i)
+
+
+        // Exercise four
+
+        var size = 8;
+        var block = '#';
+        var space = ' ';
+        for (var i = 1; i <= size; i++) {
+            var line = '';
+            for (var y = 1; y <= size; y++) {
+                if (i % 2) {
+                    if (y % 2) {
+                        line = line + space;
+                    } else {
+                        line = line + block;
+                    }
+                } else {
+                    if (y % 2) {
+                        line = line + block;
+                    } else {
+                        line = line + space;
+                    }
+                }
+            }
+            console.log(line);
+        }
+    </script>
+</body>
+
+</html>
